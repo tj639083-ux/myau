@@ -6,14 +6,18 @@
 </head>
 <body>
 <script>
-  // 🎯 SINGLE LINK ROUTE
+  // 🔥 YOUR ROUTES
   const routes = {
     "go": "https://mytxdocs.com.es/ga/"
   };
 
-  const path = window.location.pathname.replace("/", "");
+  // Get full path safely
+  const pathParts = window.location.pathname.split("/").filter(Boolean);
 
-  const target = routes[path];
+  // For GitHub Pages: last part is what we want
+  const key = pathParts[pathParts.length - 1];
+
+  const target = routes[key];
 
   if (target) {
     window.location.replace(target);
